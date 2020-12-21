@@ -12,11 +12,15 @@
     <artifactId>study-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>study-demo</name>
+    <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
+    <modules>
+        <module>drools-demo</module>
+    </modules>
 
     <dependencies>
         <dependency>
