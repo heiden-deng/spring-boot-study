@@ -20,6 +20,7 @@
     </properties>
     <modules>
         <module>drools-demo</module>
+        <module>callchain-base-demo</module>
     </modules>
 
     <dependencies>
