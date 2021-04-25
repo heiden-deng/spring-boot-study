@@ -1,0 +1,7 @@
+org:
+  neo4j:
+    driver:
+      authentication:
+        username: neo4j
+        password: neo4j123
+      uri: bolt://127.0.0.1:7687
