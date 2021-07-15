@@ -18,6 +18,8 @@ public class PersonActImpl implements PersonActIntf {
         }else{
             System.out.println("小朋友,你好");
         }
+        StudentInner studentInner = new StudentInner();
+        studentInner.say("sayHi ...");
     }
 
     @Override
@@ -35,11 +37,14 @@ public class PersonActImpl implements PersonActIntf {
             System.out.println("走之前，记得打声招呼哦");
         }
         System.out.println("收拾东西");
-
+        StudentInner studentInner = new StudentInner();
+        studentInner.say("sayBey ...");
     }
 
     @Override
     public void eat(int age) {
+        StudentInner studentInner = new StudentInner();
+        studentInner.say("eat ...");
         System.out.println("开始吃饭了");
         switch (age/20){
             case 5:
@@ -64,6 +69,37 @@ public class PersonActImpl implements PersonActIntf {
                 System.out.println("火星人，快点回火星吧");
             }
 
+        }
+
+    }
+
+    @Override
+    public void callPerson(Person person) {
+        System.out.println(person);
+    }
+
+    static class StudentInner {
+        private String name;
+        private String id;
+
+        public void say(String word){
+            System.out.println("hello from StudentInner " + word);
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getId() {
+            return id;
+        }
+
+        public void setId(String id) {
+            this.id = id;
         }
     }
 }
